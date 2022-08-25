@@ -83,8 +83,6 @@ public class SoundManager
         if (type == Define.Sound.Bgm)
         {
             audioClip = Managers.Resource.Load<AudioClip>(path);
-            if (audioClip == null)
-                Debug.Log($"AudioClip Missing! {path}");
         }
         else
         {
@@ -93,10 +91,10 @@ public class SoundManager
                 audioClip = Managers.Resource.Load<AudioClip>(path);
                 _audioClips.Add(path, audioClip);
             }
-
-            if (audioClip == null)
-                Debug.Log($"AudioClip Missing! {path}");
         }
+
+        if (audioClip == null)
+            Debug.Log($"AudioClip Missing! {path}");
 
         return audioClip;
     }
