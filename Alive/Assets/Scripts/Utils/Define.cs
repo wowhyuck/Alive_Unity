@@ -34,7 +34,9 @@ public class Define
 
     public enum MouseEvent
     {
-        Press,
+        PointDown,
+        Pressed,
+        PointUp,
         Click,
     }
 
