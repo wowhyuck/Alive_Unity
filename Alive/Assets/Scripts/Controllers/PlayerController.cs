@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
 
         Managers.Input.MouseAction -= OnMouseEvent;
         Managers.Input.MouseAction += OnMouseEvent;
+
+        Managers.UI.MakeWorldSpaceUI<UI_HpBar>(transform);
     }
 
     void UpdateDie()
@@ -122,6 +124,12 @@ public class PlayerController : MonoBehaviour
 
     void OnHitEvent()
     {
+        if(_lockTarget != null)
+        {
+            // TODO : 내 데미지를 상대방 체력 함수에 건내기
+
+        }
+
         if(_stopAttack)
         {
             State = PlayerState.Idle;
