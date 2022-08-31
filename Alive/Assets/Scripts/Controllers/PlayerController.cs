@@ -83,8 +83,8 @@ public class PlayerController : BaseController
     {
         if(_lockTarget != null)
         {
-            // TODO : 내 데미지를 상대방 체력 함수에 건내기
-
+            Stat targetStat = _lockTarget.GetComponent<Stat>();
+            targetStat.OnAttacked(_stat);
         }
 
         if(_stopAttack)

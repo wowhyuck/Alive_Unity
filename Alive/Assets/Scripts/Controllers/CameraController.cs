@@ -28,7 +28,8 @@ public class CameraController : MonoBehaviour
                 return;
 
             RaycastHit hit;
-            if (Physics.Raycast(_player.transform.position, _delta, out hit, _delta.magnitude, LayerMask.GetMask("Wall")))
+            // 카메라와 플레이어 사이에 'Block'이 있을 경우
+            if (Physics.Raycast(_player.transform.position, _delta, out hit, _delta.magnitude, 1<<(int)Define.Layer.Block))
             {
 
             }
