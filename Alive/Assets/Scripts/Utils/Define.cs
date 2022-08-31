@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Define
 {
+    public enum State
+    {
+        Die,
+        Moving,
+        Idle,
+        Attack,
+    }
+
     public enum Layer
     {
         Ground = 8,
