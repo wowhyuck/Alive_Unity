@@ -40,6 +40,7 @@ public class PlayerController : BaseController
 
         // 이동
         Vector3 dir = _destPos - transform.position;
+
         if (dir.magnitude < 1.0f)
         {
             State = Define.State.Idle;
