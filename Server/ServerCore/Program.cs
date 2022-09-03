@@ -9,36 +9,35 @@ namespace ServerCore
 {
     class Program
     {
-        static void MainThread(object state)
+        volatile static bool _stop = false;
+
+        static void ThreadMain()
         {
-            while(true)
-                Console.WriteLine("Hello Thread!");
+            Console.WriteLine("쓰레드 시작!");
+
+            while(_stop == false)
+            {
+                // 누군가 stop 신호를 해주기를 기다린다.
+            }
+
+            Console.WriteLine("쓰레드 종료!");
         }
 
         static void Main(string[] args)
         {
+            Task t = new Task(ThreadMain);
+            t.Start();
 
-            ThreadPool.SetMinThreads(1, 1);
-            ThreadPool.SetMaxThreads(5, 5);
+            Thread.Sleep(1000);
 
-            for(int i=0; i<5; i++)
-            {
-                Task t = new Task(() => { while (true) { } }, TaskCreationOptions.LongRunning);
-                t.Start();
-            }
+            _stop = true;
 
-            //for (int i = 0; i < 5; i++)
-            //    ThreadPool.QueueUserWorkItem((obj) => { while (true) { } });
+            Console.WriteLine("Stop 호출");
+            Console.WriteLine("종료 대기중");
 
-            ThreadPool.QueueUserWorkItem(MainThread);
+            t.Wait();
 
-            //Thread t = new Thread(MainThread);
-            //t.Name = "Test Thread";
-            //t.IsBackground = true;
-            //t.Start();
-            //Console.WriteLine("Waiting for Thread");
-            //t.Join();
-            //Console.WriteLine("Hello World!");
+            Console.WriteLine("종료 성공");
         }
     }
 }
