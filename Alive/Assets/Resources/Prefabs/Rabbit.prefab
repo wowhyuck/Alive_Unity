@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4709495101766540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_Clavicle_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,9 +42,10 @@ GameObject:
   - component: {fileID: 4632031846521638}
   - component: {fileID: 95978546307975870}
   - component: {fileID: 3107848347002465070}
-  - component: {fileID: 210253160951010471}
-  m_Layer: 0
-  m_Name: Rabbit_prefab
+  - component: {fileID: 6573869688263160394}
+  - component: {fileID: 79112998871376726}
+  m_Layer: 10
+  m_Name: Rabbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,8 +59,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038650439005304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.224, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4256040107157962}
   - {fileID: 4374978340286478}
@@ -99,10 +100,10 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &210253160951010471
-BoxCollider:
+--- !u!136 &6573869688263160394
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -111,9 +112,27 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.32374054, y: 0.46175247, z: 0.71354496}
-  m_Center: {x: -0.0034503043, y: 0.2139186, z: 0.06380893}
+  m_Radius: 0.26718456
+  m_Height: 0.73855793
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.23281497, z: 0.06172973}
+--- !u!114 &79112998871376726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038650439005304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66747a22d4c027d4b940fd9567eeae18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lockTarget: {fileID: 0}
+  _destPos: {x: 0, y: 0, z: 0}
+  _state: 2
+  _scanRange: 10
+  _attackRange: 2
 --- !u!1 &1052421133370920
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4903612562912788}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_Ears_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4570565635698458}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Spine_TopSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4881466519647542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_HindLeg_KneeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4353349504200102}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_FrontLeg_ToeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4357382922226956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Spine_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4610109110195448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_ROOTSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4487689103872808}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Neck_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4698407145910144}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_HindLeg_ToeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4790201320636826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_FrontLeg_KneeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4256040107157962}
   - component: {fileID: 137223047522622260}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wild_rabbit_test5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4245711181324158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_HindLeg_AnkleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4763779385582372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_Ears_01_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4591275643673940}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_Ears_01_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4250917633799166}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_FrontLeg_AnkleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4066481840266050}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_FrontLeg_BallSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4392754717791562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Nose_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4572801552945362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_HindLeg_BallSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4499909483986896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_HindLeg_ToeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4200898561254806}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_Clavicle_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4388117059979888}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_HindLeg_HipSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4001768241299490}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_FrontLeg_KneeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4163743315827640}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_HindLeg_BallSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4783100845917802}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_FrontLeg_ToeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -933,7 +952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4128822304504108}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_FrontLeg_HipSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4809965953333236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Neck_TopSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +1016,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4951722104430708}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Spine_03SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,7 +1047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4950538672451326}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Spine_04SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4404056529024792}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Head_JawEndSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4374978340286478}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_MAINSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4248093526256582}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_HindLeg_AnkleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,7 +1170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4603701081802354}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_Ears_01_03SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4434277155825198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Nose_01_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4204960370687008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_HindLeg_KneeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4054897648940124}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Tail_01_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1272,7 +1291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4827100777124654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_Ears_01_03SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1302,7 +1321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4682438406073862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_FrontLeg_HipSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4801985140500678}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_r_FrontLeg_BallSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4610417223322012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Spine_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1395,7 +1414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4847601474157692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_HindLeg_HipSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1426,7 +1445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4896163641599448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Neck_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1457,7 +1476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4318526125521802}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Tail_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1488,7 +1507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4948502630430996}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_Ears_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1519,7 +1538,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4849258239656812}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_l_FrontLeg_AnkleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4150294248589440}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Head_TopSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4108686187788466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WildRabbit_Head_JawSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
