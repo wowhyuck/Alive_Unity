@@ -10,7 +10,7 @@ public class GameScene : BaseScene
 
         SceneType = Define.Scene.Game;
 
-        Managers.UI.ShowSceneUI<UI_Inven>();
+        Managers.UI.ShowSceneUI<UI_Main>();
 
         Dictionary<int, Data.Stat> dict = Managers.Data.StatDict;
 
@@ -20,7 +20,7 @@ public class GameScene : BaseScene
         //Managers.Game.Spawn(Define.WorldObject.Monster, "Bear");
         GameObject go = new GameObject { name = "SpawningPool" };
         SpawningPool pool = go.GetOrAddComponent<SpawningPool>();
-        pool.SetKeepMonsterCount(5);
+        pool.SetKeepMonsterCount(1);
     }
 
     public override void Clear()
