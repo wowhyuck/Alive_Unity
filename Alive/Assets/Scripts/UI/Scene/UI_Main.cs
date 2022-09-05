@@ -44,8 +44,8 @@ public class UI_Main : UI_Scene
         foreach (Transform child in bar.transform)
             Managers.Resource.Destroy(child.gameObject);
 
-        MakeMainUI<UI_Main_HpBar>(bar, new Vector3(80.0f, -20.0f, 0.0f));       // Hp Bar
-        MakeMainUI<UI_Main_MpBar>(bar, new Vector3(80.0f, -35.0f, 0.0f));       // Mp Bar
+        MakeMainUI<UI_Main_HpBar>(bar, new Vector3(80.0f, -14.0f, 0.0f));       // Hp Bar
+        MakeMainUI<UI_Main_MpBar>(bar, new Vector3(80.0f, -32.0f, 0.0f));       // Mp Bar
         MakeMainUI<UI_Main_FatigueBar>(bar, new Vector3(80.0f, -50.0f, 0.0f));  // Fatigue Bar
         MakeMainUI<UI_Main_ExpBar>(bar, new Vector3(-210.0f, -50.0f, 0.0f));    // Exp Bar
         MakeMainUI<UI_Profile>(bar, new Vector3(-210.0f, 14.0f, 0.0f));         // Profile
