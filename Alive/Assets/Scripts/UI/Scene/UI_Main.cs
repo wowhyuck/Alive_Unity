@@ -44,29 +44,18 @@ public class UI_Main : UI_Scene
         foreach (Transform child in bar.transform)
             Managers.Resource.Destroy(child.gameObject);
 
-        // UI_Main_HpBar
-        GameObject mainHpBar = Managers.UI.MakeSubItem<UI_Main_HpBar>(bar.transform).gameObject;
-        UI_Main_HpBar hpBar = mainHpBar.GetOrAddComponent<UI_Main_HpBar>();
-        mainHpBar.transform.position = bar.transform.position + new Vector3(80.0f, -20.0f, 0.0f);   // Bar의 위치 조정
+        MakeMainUI<UI_Main_HpBar>(bar, new Vector3(80.0f, -20.0f, 0.0f));       // Hp Bar
+        MakeMainUI<UI_Main_MpBar>(bar, new Vector3(80.0f, -35.0f, 0.0f));       // Mp Bar
+        MakeMainUI<UI_Main_FatigueBar>(bar, new Vector3(80.0f, -50.0f, 0.0f));  // Fatigue Bar
+        MakeMainUI<UI_Main_ExpBar>(bar, new Vector3(-210.0f, -50.0f, 0.0f));    // Exp Bar
+        MakeMainUI<UI_Profile>(bar, new Vector3(-210.0f, 14.0f, 0.0f));         // Profile
 
-        // UI_Main_MpBar
-        GameObject mainMpBar = Managers.UI.MakeSubItem<UI_Main_MpBar>(bar.transform).gameObject;
-        UI_Main_MpBar mpBar = mainMpBar.GetOrAddComponent<UI_Main_MpBar>();
-        mainMpBar.transform.position = bar.transform.position + new Vector3(80.0f, -33.0f, 0.0f);
+    }
 
-        // UI_Main_FatigueBar
-        GameObject mainFatigueBar = Managers.UI.MakeSubItem<UI_Main_FatigueBar>(bar.transform).gameObject;
-        UI_Main_FatigueBar fatigueBar = mainFatigueBar.GetOrAddComponent<UI_Main_FatigueBar>();
-        mainFatigueBar.transform.position = bar.transform.position + new Vector3(80.0f, -46.0f, 0.0f);
-
-        // UI_Main_ExpBar
-        GameObject mainExpBar = Managers.UI.MakeSubItem<UI_Main_ExpBar>(bar.transform).gameObject;
-        UI_Main_ExpBar expBar = mainExpBar.GetOrAddComponent<UI_Main_ExpBar>();
-        mainExpBar.transform.position = bar.transform.position + new Vector3(-210.0f, -50.0f, 0.0f);
-
-        // UI_Profile
-        GameObject mainProfile = Managers.UI.MakeSubItem<UI_Profile>(bar.transform).gameObject;
-        UI_Profile profile = mainProfile.GetOrAddComponent<UI_Profile>();
-        mainProfile.transform.position = bar.transform.position + new Vector3(-210.0f, 14f, 0.0f);
+    public void MakeMainUI<T>(GameObject parent, Vector3 pos) where T : UI_Base
+    {
+        GameObject main = Managers.UI.MakeSubItem<T>(parent.transform).gameObject;
+        T child = main.GetOrAddComponent<T>();
+        main.transform.position = parent.transform.position + pos;   // Bar의 위치 조정
     }
 }
