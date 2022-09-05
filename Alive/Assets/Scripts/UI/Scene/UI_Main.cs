@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_Main : UI_Scene
 {
@@ -52,5 +53,10 @@ public class UI_Main : UI_Scene
         GameObject mainExpBar = Managers.UI.MakeSubItem<UI_Main_ExpBar>(bar.transform).gameObject;
         UI_Main_ExpBar expBar = mainExpBar.GetOrAddComponent<UI_Main_ExpBar>();
         mainExpBar.transform.position = bar.transform.position + new Vector3(-210.0f, -50.0f, 0.0f);
+
+        // UI_Profile
+        GameObject mainProfile = Managers.UI.MakeSubItem<UI_Profile>(bar.transform).gameObject;
+        UI_Profile profile = mainProfile.GetOrAddComponent<UI_Profile>();
+        mainProfile.transform.position = bar.transform.position + new Vector3(-210.0f, 14f, 0.0f);
     }
 }
