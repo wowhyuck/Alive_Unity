@@ -8,6 +8,14 @@ public class PlayerStat : Stat
     protected int _exp;
     [SerializeField]
     protected int _gold;
+    [SerializeField]
+    protected int _mp;
+    [SerializeField]
+    protected int _maxMp;
+    [SerializeField]
+    protected int _currentFatigue;
+    [SerializeField]
+    protected int _maxFatigue;
 
     public int Exp 
     { 
@@ -36,8 +44,12 @@ public class PlayerStat : Stat
             }
         } 
     }
-    public int Gold { get { return _gold; } set { _gold = value; } }
 
+    public int Gold { get { return _gold; } set { _gold = value; } }
+    public int Mp { get { return _mp; } set { _mp = value; } }
+    public int MaxMp { get { return _maxMp; } set { _maxMp = value; } }
+    public int CurrentFatigue { get { return _currentFatigue; } set { _currentFatigue = value; } }
+    public int MaxFatigue { get { return _maxFatigue; } set { _maxFatigue = value; } }
 
     // TODO : 나중에 데이터 시트로 옮기기
     private void Start()
@@ -47,6 +59,8 @@ public class PlayerStat : Stat
         _moveSpeed = 4.0f;
         _exp = 0;
         _gold = 0;
+        _currentFatigue = 0;
+        _maxFatigue = 100;
 
         SetStat(_level);
     }
@@ -58,6 +72,8 @@ public class PlayerStat : Stat
 
         _hp = stat.maxHp;
         _maxHp = stat.maxHp;
+        _mp = stat.maxMp;
+        _maxMp = stat.maxMp;
         _attack = stat.attack;
     }
 

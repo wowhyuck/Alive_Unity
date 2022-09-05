@@ -49,6 +49,16 @@ public class UI_Main : UI_Scene
         UI_Main_HpBar hpBar = mainHpBar.GetOrAddComponent<UI_Main_HpBar>();
         mainHpBar.transform.position = bar.transform.position + new Vector3(80.0f, -20.0f, 0.0f);   // Bar의 위치 조정
 
+        // UI_Main_MpBar
+        GameObject mainMpBar = Managers.UI.MakeSubItem<UI_Main_MpBar>(bar.transform).gameObject;
+        UI_Main_MpBar mpBar = mainMpBar.GetOrAddComponent<UI_Main_MpBar>();
+        mainMpBar.transform.position = bar.transform.position + new Vector3(80.0f, -33.0f, 0.0f);
+
+        // UI_Main_FatigueBar
+        GameObject mainFatigueBar = Managers.UI.MakeSubItem<UI_Main_FatigueBar>(bar.transform).gameObject;
+        UI_Main_FatigueBar fatigueBar = mainFatigueBar.GetOrAddComponent<UI_Main_FatigueBar>();
+        mainFatigueBar.transform.position = bar.transform.position + new Vector3(80.0f, -46.0f, 0.0f);
+
         // UI_Main_ExpBar
         GameObject mainExpBar = Managers.UI.MakeSubItem<UI_Main_ExpBar>(bar.transform).gameObject;
         UI_Main_ExpBar expBar = mainExpBar.GetOrAddComponent<UI_Main_ExpBar>();
