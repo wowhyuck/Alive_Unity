@@ -25,7 +25,7 @@ public class UI_Main_MpBar : UI_Base
     {
         float ratio = _stat.Mp / (float)_stat.MaxMp;
         SetHpRatio(ratio);
-        Get<GameObject>((int)GameObjects.Text).GetComponent<Text>().text = $"{_stat.Mp} / {_stat.MaxMp}";
+        Get<GameObject>((int)GameObjects.Text).GetComponent<Text>().text = $"{(int)_stat.Mp} / {_stat.MaxMp}";
     }
 
     public void SetHpRatio(float ratio)

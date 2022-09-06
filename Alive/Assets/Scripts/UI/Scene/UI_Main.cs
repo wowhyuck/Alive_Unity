@@ -59,7 +59,7 @@ public class UI_Main : UI_Scene
             Managers.Resource.Destroy(child.gameObject);
         GameObject attack = Managers.UI.MakeSubItem<UI_Attack>(status.transform).gameObject;
         GameObject defence = Managers.UI.MakeSubItem<UI_Defence>(status.transform).gameObject;
-        GameObject movingSpeed = Managers.UI.MakeSubItem<UI_MovingSpeed>(status.transform).gameObject;
+        GameObject moveSpeed = Managers.UI.MakeSubItem<UI_MoveSpeed>(status.transform).gameObject;
 
     }
 

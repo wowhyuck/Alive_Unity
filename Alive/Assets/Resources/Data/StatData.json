@@ -2,24 +2,113 @@
   "stats": [
     {
       "level": "1",
-      "maxHp": "100",
-      "maxMp": "100",
-      "attack": "10",
-      "totalExp" : "0"
+      "attack": "44",
+      "defence": "28",
+      "maxHp": "730",
+      "regenHp": "1.5",
+      "maxMp": "410",
+      "regenMp": "2.1",
+      "moveSpeed": "3.55",
+      "totalExp": "0"
     },
     {
       "level": "2",
-      "maxHp": "150",
-      "maxMp": "150",
-      "attack": "15",
-      "totalExp" : "10"
+      "attack": "46.5",
+      "defence": "29.8",
+      "maxHp": "800",
+      "regenHp": "1.56",
+      "maxMp": "423",
+      "regenMp": "2.13",
+      "moveSpeed": "3.55",
+      "totalExp": "200"
     },
     {
       "level": "3",
-      "maxHp": "200",
-      "maxMp": "200",
-      "attack": "20",
-      "totalExp" : "20"
+      "attack": "49",
+      "defence": "31.6",
+      "maxHp": "870",
+      "regenHp": "1.62",
+      "maxMp": "436",
+      "regenMp": "2.16",
+      "moveSpeed": "3.55",
+      "totalExp": "560"
+    },
+    {
+      "level": "4",
+      "attack": "51.5",
+      "defence": "33.4",
+      "maxHp": "940",
+      "regenHp": "1.68",
+      "maxMp": "449",
+      "regenMp": "2.19",
+      "moveSpeed": "3.55",
+      "totalExp": "1080"
+    },
+    {
+      "level": "5",
+      "attack": "54",
+      "defence": "35.2",
+      "maxHp": "1010",
+      "regenHp": "1.74",
+      "maxMp": "462",
+      "regenMp": "2.22",
+      "moveSpeed": "3.55",
+      "totalExp": "1760"
+    },
+    {
+      "level": "6",
+      "attack": "56.5",
+      "defence": "35.2",
+      "maxHp": "1010",
+      "regenHp": "1.74",
+      "maxMp": "462",
+      "regenMp": "2.22",
+      "moveSpeed": "3.55",
+      "totalExp": "2610"
+    },
+    {
+      "level": "7",
+      "attack": "59",
+      "defence": "38.8",
+      "maxHp": "1150",
+      "regenHp": "1.86",
+      "maxMp": "488",
+      "regenMp": "2.28",
+      "moveSpeed": "3.55",
+      "totalExp": "3610"
+    },
+    {
+      "level": "8",
+      "attack": "61.5",
+      "defence": "40.6",
+      "maxHp": "1220",
+      "regenHp": "1.92",
+      "maxMp": "501",
+      "regenMp": "2.31",
+      "moveSpeed": "3.55",
+      "totalExp": "4910"
+    },
+    {
+      "level": "9",
+      "attack": "64",
+      "defence": "42.4",
+      "maxHp": "1290",
+      "regenHp": "1.98",
+      "maxMp": "514",
+      "regenMp": "2.34",
+      "moveSpeed": "3.55",
+      "totalExp": "6390"
+    },
+    {
+      "level": "10",
+      "attack": "66.5",
+      "defence": "44.2",
+      "maxHp": "1360",
+      "regenHp": "2.04",
+      "maxMp": "527",
+      "regenMp": "2.37",
+      "moveSpeed": "3.55",
+      "totalExp": "8050"
     }
   ]
 }

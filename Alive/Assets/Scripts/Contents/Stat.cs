@@ -7,21 +7,21 @@ public class Stat : MonoBehaviour
     [SerializeField]
     protected int _level;
     [SerializeField]
-    protected int _hp;
+    protected float _hp;
     [SerializeField]
-    protected int _maxHp;
+    protected float _maxHp;
     [SerializeField]
-    protected int _attack;
+    protected float _attack;
     [SerializeField]
-    protected int _defence;
+    protected float _defence;
     [SerializeField]
     protected float _moveSpeed;
 
     public int Level { get { return _level; } set { _level = value; } }
-    public int Hp { get { return _hp; } set { _hp = value; } }
-    public int MaxHp { get { return _maxHp; } set { _maxHp = value; } }
-    public int Attack { get { return _attack; } set { _attack = value; } }
-    public int Defence { get { return _defence; } set { _defence = value; } }
+    public float Hp { get { return _hp; } set { _hp = value; } }
+    public float MaxHp { get { return _maxHp; } set { _maxHp = value; } }
+    public float Attack { get { return _attack; } set { _attack = value; } }
+    public float Defence { get { return _defence; } set { _defence = value; } }
     public float MoveSpeed { get { return _moveSpeed; } set { _moveSpeed = value; } }
 
     // TODO : 나중에 데이터 시트로 옮기기
@@ -37,7 +37,7 @@ public class Stat : MonoBehaviour
 
     public virtual void OnAttacked(Stat attacker)
     {
-        int damage = Mathf.Max(0, attacker.Attack - Defence);
+        float damage = Mathf.Max(1, attacker.Attack - Defence);
         Hp -= damage;
         if (Hp <= 0)
         {

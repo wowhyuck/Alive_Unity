@@ -10,9 +10,11 @@ namespace Data
     public class Stat
     {
         public int level;
-        public int maxHp;
-        public int maxMp;
-        public int attack;
+        public float attack;
+        public float defence;
+        public float maxHp;
+        public float maxMp;
+        public float moveSpeed;
         public int totalExp;
     }
 

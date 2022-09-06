@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_MovingSpeed : UI_Base
+public class UI_MoveSpeed : UI_Base
 {
     public enum GameObjects
     {
