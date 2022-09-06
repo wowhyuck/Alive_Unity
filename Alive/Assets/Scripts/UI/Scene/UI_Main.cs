@@ -8,7 +8,8 @@ public class UI_Main : UI_Scene
     enum GameObjects
     {
         UI_Inven,
-        UI_Bar
+        UI_Bar,
+        UI_Status
     }
 
     void Start()
@@ -19,6 +20,8 @@ public class UI_Main : UI_Scene
     public override void Init()
     {
         base.Init();
+
+        PlayerController obj = FindObjectOfType<PlayerController>();
 
         Bind<GameObject>(typeof(GameObjects));
 
@@ -44,15 +47,23 @@ public class UI_Main : UI_Scene
         foreach (Transform child in bar.transform)
             Managers.Resource.Destroy(child.gameObject);
 
-        MakeMainUI<UI_Main_HpBar>(bar, new Vector3(80.0f, -14.0f, 0.0f));       // Hp Bar
-        MakeMainUI<UI_Main_MpBar>(bar, new Vector3(80.0f, -32.0f, 0.0f));       // Mp Bar
-        MakeMainUI<UI_Main_FatigueBar>(bar, new Vector3(80.0f, -50.0f, 0.0f));  // Fatigue Bar
-        MakeMainUI<UI_Main_ExpBar>(bar, new Vector3(-210.0f, -50.0f, 0.0f));    // Exp Bar
-        MakeMainUI<UI_Profile>(bar, new Vector3(-210.0f, 14.0f, 0.0f));         // Profile
+        MakeMainUIBar<UI_Main_HpBar>(bar, new Vector3(80.0f, -14.0f, 0.0f));       // Hp Bar
+        MakeMainUIBar<UI_Main_MpBar>(bar, new Vector3(80.0f, -32.0f, 0.0f));       // Mp Bar
+        MakeMainUIBar<UI_Main_FatigueBar>(bar, new Vector3(80.0f, -50.0f, 0.0f));  // Fatigue Bar
+        MakeMainUIBar<UI_Main_ExpBar>(bar, new Vector3(-210.0f, -50.0f, 0.0f));    // Exp Bar
+        MakeMainUIBar<UI_Profile>(bar, new Vector3(-210.0f, 14.0f, 0.0f));         // Profile
+
+        // UI_Status
+        GameObject status = Get<GameObject>((int)GameObjects.UI_Status);
+        foreach (Transform child in status.transform)
+            Managers.Resource.Destroy(child.gameObject);
+        GameObject attack = Managers.UI.MakeSubItem<UI_Attack>(status.transform).gameObject;
+        GameObject defence = Managers.UI.MakeSubItem<UI_Defence>(status.transform).gameObject;
+        GameObject movingSpeed = Managers.UI.MakeSubItem<UI_MovingSpeed>(status.transform).gameObject;
 
     }
 
-    public void MakeMainUI<T>(GameObject parent, Vector3 pos) where T : UI_Base
+    public void MakeMainUIBar<T>(GameObject parent, Vector3 pos) where T : UI_Base
     {
         GameObject main = Managers.UI.MakeSubItem<T>(parent.transform).gameObject;
         T child = main.GetOrAddComponent<T>();

@@ -11,14 +11,13 @@ public class UI_Main_HpBar : UI_Base
     }
 
     GameObject _player;
-    Stat _stat;
-    Text _text;
+    PlayerStat _stat;
 
     public override void Init()
     {
         PlayerController obj = FindObjectOfType<PlayerController>();
         _player = obj.gameObject;
-        _stat = _player.GetComponent<Stat>();
+        _stat = _player.GetComponent<PlayerStat>();
         Bind<GameObject>(typeof(GameObjects));
     }
 
