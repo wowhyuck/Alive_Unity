@@ -1,0 +1,13 @@
+{
+  "stats": [
+    {
+      "id": "0",
+      "level": "1",
+      "attack": "22",
+      "defence": "14",
+      "maxHp": "150",
+      "moveSpeed": "3.33",
+      "exp": "70"
+    }
+  ]
+}

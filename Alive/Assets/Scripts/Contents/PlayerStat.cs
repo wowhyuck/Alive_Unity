@@ -53,7 +53,7 @@ public class PlayerStat : Stat
     public int CurrentFatigue { get { return _currentFatigue; } set { _currentFatigue = value; } }
     public int MaxFatigue { get { return _maxFatigue; } set { _maxFatigue = value; } }
 
-    // TODO : 나중에 데이터 시트로 옮기기
+    // 플레이어 스탯 초기화
     private void Start()
     {
         _level = 1;
@@ -65,6 +65,7 @@ public class PlayerStat : Stat
         SetStat(_level);
     }
 
+    // 플레이어 스탯 설정
     public void SetStat(int level)
     {
         Dictionary<int, Data.Stat> dict = Managers.Data.StatDict;
@@ -79,6 +80,7 @@ public class PlayerStat : Stat
         _defence = stat.defence;
     }
 
+    // 플레이어가 죽었을 때
     protected override void OnDead(Stat attackder)
     {
         Debug.Log("Player Dead");

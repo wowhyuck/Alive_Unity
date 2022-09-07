@@ -1,0 +1,31 @@
+{
+  "stats": [
+    {
+      "id": "2",
+      "level": "3",
+      "attack": "72",
+      "defence": "28",
+      "maxHp": "638",
+      "moveSpeed": "4",
+      "exp": "190"
+    },
+    {
+      "id": "2",
+      "level": "6",
+      "attack": "146",
+      "defence": "38",
+      "maxHp": "920",
+      "moveSpeed": "4",
+      "exp": "270"
+    },
+    {
+      "id": "2",
+      "level": "10",
+      "attack": "177",
+      "defence": "49",
+      "maxHp": "1191",
+      "moveSpeed": "4",
+      "exp": "350"
+    }
+  ]
+}

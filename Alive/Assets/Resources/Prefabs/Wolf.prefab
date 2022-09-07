@@ -1479,6 +1479,7 @@ GameObject:
   - component: {fileID: 639588070709157009}
   - component: {fileID: 8090826775851772193}
   - component: {fileID: -880175415249290991}
+  - component: {fileID: 4630723963343518387}
   m_Layer: 10
   m_Name: Wolf
   m_TagString: Untagged
@@ -1568,6 +1569,26 @@ MonoBehaviour:
   _state: 2
   _scanRange: 10
   _attackRange: 2
+--- !u!114 &4630723963343518387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817446995028838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5dd53472e78ffe4fab27d6d7ea3efc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
+  _hp: 0
+  _maxHp: 0
+  _attack: 0
+  _defence: 0
+  _moveSpeed: 0
+  _key: 0
+  _exp: 0
 --- !u!1 &1852420776143842
 GameObject:
   m_ObjectHideFlags: 0

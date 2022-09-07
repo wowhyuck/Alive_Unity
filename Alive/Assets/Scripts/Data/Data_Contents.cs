@@ -9,13 +9,17 @@ namespace Data
     [Serializable]
     public class Stat
     {
+        // json 변수명과 동일하게
         public int level;
         public float attack;
         public float defence;
         public float maxHp;
+        public float regenHp;
         public float maxMp;
+        public float regenMp;
         public float moveSpeed;
         public int totalExp;
+        public int exp;
     }
 
     [Serializable]
@@ -31,6 +35,16 @@ namespace Data
                 dict.Add(stat.level, stat);
 
             return dict;
+        }
+
+        public List<Stat> MakeList()
+        {
+            List<Stat> list = new List<Stat>();
+
+            foreach (Stat stat in stats)
+                list.Add(stat);
+
+            return list;
         }
     }
     #endregion

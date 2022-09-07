@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Define
 {
+    public enum Monster
+    {
+        Rabbit,
+        WildBoar,
+        Wolf,
+        Cow
+    }
+
     public enum WorldObject
     {
         Unknow,

@@ -1663,6 +1663,7 @@ GameObject:
   - component: {fileID: 7728291794851788923}
   - component: {fileID: 2865575946877180239}
   - component: {fileID: 1485148359243777500}
+  - component: {fileID: 6612183190255800362}
   m_Layer: 10
   m_Name: WildBoar
   m_TagString: Untagged
@@ -1752,6 +1753,26 @@ CapsuleCollider:
   m_Height: 1.8933222
   m_Direction: 2
   m_Center: {x: 0.002497971, y: 0.47462577, z: 0.08602822}
+--- !u!114 &6612183190255800362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960965127817164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5dd53472e78ffe4fab27d6d7ea3efc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
+  _hp: 0
+  _maxHp: 0
+  _attack: 0
+  _defence: 0
+  _moveSpeed: 0
+  _key: 0
+  _exp: 0
 --- !u!1 &1979964131279334
 GameObject:
   m_ObjectHideFlags: 0
