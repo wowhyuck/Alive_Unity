@@ -134,10 +134,19 @@ public class PlayerController : BaseController
                         State = Define.State.Moving;
                         _stopAttack = false;
 
+
+                        // Target Lock
                         if (hit.collider.gameObject.layer == (int)Define.Layer.Monster)
                             _lockTarget = hit.collider.gameObject;
                         else
+                        {
                             _lockTarget = null;
+
+                            // Mouse Marker
+                            GameObject go = Managers.Resource.Instantiate("Cursor/Marker1");
+                            go.transform.position = hit.point + hit.normal * 0.01f;
+                            Destroy(go, 0.25f);
+                        }
                     }
                 }
                 break;
