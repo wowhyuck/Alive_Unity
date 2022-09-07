@@ -52,7 +52,9 @@ public class MonsterStat : Stat
         if (playerStat != null)
         {
             playerStat.Exp += _exp;
-            _key++;
+
+            if(_key < 3)
+                _key++;
         }
         Managers.Game.Despawn(gameObject);
     }
