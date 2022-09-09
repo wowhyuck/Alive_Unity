@@ -47,6 +47,7 @@ public class PlayerController : BaseController
         }
         else
         {
+            // 이동할 때 앞에 'Block' layer 있을 때 멈추기
             if (Physics.Raycast(transform.position + Vector3.up * 0.5f, dir, 1.0f, LayerMask.GetMask("Block")))
             {
                 if (Input.GetMouseButton(1) == false)
@@ -62,8 +63,8 @@ public class PlayerController : BaseController
 
     void OnRunEvent()
     {
-        Debug.Log("뚜벅뚜벅~~");
-
+        // Sound
+        Managers.Sound.Play("UnityChan/footstep");
     }
 
     protected override void UpdateIdle()
@@ -133,7 +134,6 @@ public class PlayerController : BaseController
                         _destPos = hit.point;
                         State = Define.State.Moving;
                         _stopAttack = false;
-
 
                         // Target Lock
                         if (hit.collider.gameObject.layer == (int)Define.Layer.Monster)
