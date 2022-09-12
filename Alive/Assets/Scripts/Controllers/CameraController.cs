@@ -5,45 +5,67 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField]
-    Define.CameraMode _mode = Define.CameraMode.QuaterView;
+    Define.CameraMode _mode = Define.CameraMode.Lock;
 
     [SerializeField]
-    Vector3 _delta = new Vector3(0.0f, 6.0f, -5.0f);
+    Vector3 _delta = new Vector3(-6, 10, -6);
 
     [SerializeField]
     GameObject _player = null;
+
+    [SerializeField]
+    float _camSpeed = 20.0f;
+
+    private Vector3 _vertical = new Vector3(1, 0, 1);
+    private Vector3 _horizontal = new Vector3(1, 0, -1);
 
     public void SetPlayer(GameObject player) { _player = player; }
 
     void Start()
     {
-
+        transform.position = _player.transform.position + _delta;
+        transform.LookAt(_player.transform);
     }
 
     void LateUpdate()
     {
-        if (_mode == Define.CameraMode.QuaterView)
-        {
-            if (_player.IsValid() == false)
-                return;
+        if (Input.GetKeyDown(KeyCode.Space))
+            _mode = Define.CameraMode.Lock;
+        else if(Input.GetKeyUp(KeyCode.Space))
+            _mode = Define.CameraMode.Unlock;
 
-            RaycastHit hit;
-            // 카메라와 플레이어 사이에 'Block'이 있을 경우
-            if (Physics.Raycast(_player.transform.position, _delta, out hit, _delta.magnitude, 1<<(int)Define.Layer.Block))
-            {
-
-            }
-            else
-            {
-                transform.position = _player.transform.position + _delta;
-                transform.LookAt(_player.transform);
-            }
-        }
+        if (_mode == Define.CameraMode.Lock)
+            SetLockView();
+        else
+            SetUnlockView();
     }
 
-    public void SetQuaterView(Vector3 delta)
+    // Camera Lock Mode
+    public void SetLockView()
     {
-        _mode = Define.CameraMode.QuaterView;
-        _delta = delta;
+        if (_player.IsValid() == false)
+            return;
+        transform.position = _player.transform.position + _delta;
+        transform.LookAt(_player.transform);
+    }
+
+    // Camera Unlock Mode
+    public void SetUnlockView()
+    {
+        // Up
+        if (Input.mousePosition.y >= Screen.height)
+            transform.position += _vertical * _camSpeed * Time.deltaTime;
+
+        // Down
+        if (Input.mousePosition.y <= 0)
+            transform.position -= _vertical * _camSpeed * Time.deltaTime;
+
+        // Right
+        if (Input.mousePosition.x >= Screen.width)
+            transform.position += _horizontal * _camSpeed * Time.deltaTime;
+
+        // Left
+        if (Input.mousePosition.x <= 0)
+            transform.position -= _horizontal * _camSpeed * Time.deltaTime;
     }
 }
