@@ -9,7 +9,8 @@ public class UI_Main : UI_Scene
     {
         UI_Inven,
         UI_Bar,
-        UI_Status
+        UI_Status,
+        UI_Skill,
     }
 
     void Start()
@@ -61,6 +62,8 @@ public class UI_Main : UI_Scene
         GameObject defence = Managers.UI.MakeSubItem<UI_Defence>(status.transform).gameObject;
         GameObject moveSpeed = Managers.UI.MakeSubItem<UI_MoveSpeed>(status.transform).gameObject;
 
+        // UI_Skill
+        GameObject skill = Get<GameObject>((int)GameObjects.UI_Skill);
     }
 
     public void MakeMainUIBar<T>(GameObject parent, Vector3 pos) where T : UI_Base
